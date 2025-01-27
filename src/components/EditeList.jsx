@@ -16,7 +16,7 @@ function EditeList() {
     const [description, setDescription] = useState('')
 
     useEffect(() => {
-        axios.get(`${backendUrl}/singlelist/${id}`).then((response) => {
+        axios.get(`${backendUrl}/api/list/singlelist/${id}`).then((response) => {
             console.log(response.data.listById)
             setName(response.data.listById.name)
             setDescription(response.data.listById.description)
@@ -28,7 +28,7 @@ function EditeList() {
 
     const update = async (e) => {
         e.preventDefault()
-      await  axios.put(`${backendUrl}/editlist/${id}`, { name, price, description }).then((response) => {
+        await axios.put(`${backendUrl}/api/list/editlist/${id}`, { name, price, description }).then((response) => {
             console.log(response.data)
             navigate("/")
         }).catch((error) => {

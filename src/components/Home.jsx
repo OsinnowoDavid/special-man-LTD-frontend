@@ -9,12 +9,12 @@ function Home() {
     const { backendUrl } = useShopContext()
     const queryClient = useQueryClient()
     const { data, isLoading, error } = useQuery("fetchlist", () => {
-        return axios.get(`${backendUrl}/getAllList`)
+        return axios.get(`${backendUrl}/api/list/getAllList`)
     })
 
     const deleteList = async (id) => {
         try {
-            await axios.delete(`${backendUrl}/deletelist/${id}`)
+            await axios.delete(`${backendUrl}/api/list/deletelist/${id}`)
             queryClient.invalidateQueries("fetchlist")
         } catch (error) {
             console.error("Error deleting list:", error.message)

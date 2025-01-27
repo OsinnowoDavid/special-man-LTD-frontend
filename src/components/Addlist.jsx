@@ -13,7 +13,7 @@ function Addlist() {
 
     const submit = (e) => {
         e.preventDefault()
-        axios.post(`${backendUrl}/addlist`, { name, price, description })
+        axios.post(`${backendUrl}/api/list/addlist`, { name, price, description })
 
         navigate("/")
     }

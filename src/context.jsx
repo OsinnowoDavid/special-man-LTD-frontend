@@ -5,6 +5,7 @@ const ShopcontextProvider = (props) => {
     const backendUrl = "https://special-man-backend.onrender.com"
     const Value = {
         backendUrl
+
     }
   
     return (
