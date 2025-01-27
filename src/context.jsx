@@ -2,7 +2,7 @@ import {createContext, useContext} from "react"
 
 export const ShopCentext = createContext()
 const ShopcontextProvider = (props) => {
-    const backendUrl = "http://localhost:8080/api/list"
+    const backendUrl = "https://special-man-backend.onrender.com"
     const Value = {
         backendUrl
     }
