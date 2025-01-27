@@ -29,6 +29,7 @@ function Home() {
         return <h1>An error has occurred</h1>
     }
 
+    
     return (
         <>
             <div className='text-center font-bold text-2xl mt-10'>
